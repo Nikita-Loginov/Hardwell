@@ -1,0 +1,26 @@
+body{
+    font-size: 16px;
+    background-color: $bg-color;
+    color:$main-color;
+    @extend %Epilogue-400;
+    overflow-x: hidden;
+    &.open--menu{
+        overflow: hidden;
+    }
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main{
+    flex:1;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $padding-container;
+}

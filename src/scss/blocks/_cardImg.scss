@@ -1,0 +1,57 @@
+@import "base/_vars.scss";
+
+.card-img{
+    padding: clamp(0.625rem, -0.114rem + 3.15vw, 2.25rem) clamp(1.625rem, 0.943rem + 2.91vw, 3.125rem);
+    background-color: $accent-color;
+    border-radius: 5px;
+    transition: all .5s;
+    position: absolute;
+    right: -43px;
+    bottom: -29px;
+    max-width: 310px;
+    &:hover{
+        scale:1.05;
+    }
+    &__header{
+        display: flex;
+        align-items: flex-end;
+        gap:10px;
+        margin-bottom: 4px;
+    }
+    &__proccent{
+        font-size: clamp(2.5rem, 1.648rem + 3.64vw, 4.375rem);
+        color:#fff;
+    }
+    &__decor{
+        width: 38px;
+        height: 38px;
+        background-color: #fff;
+        border-radius: 50%;
+        @extend %flexCenter;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 24px;
+            height: 24px;
+            background-image: url(../../img/icon/arrowTop.svg);
+            background-repeat: no-repeat;
+            animation: arrowTop 1s infinite linear;
+        }
+    }
+    &__text{
+        font-size: clamp(1.25rem, 1.136rem + 0.48vw, 1.5rem);
+        color:#fff;
+    }
+    @media(max-width:1023px){
+        display: none;
+    }
+}
+
+@keyframes arrowTop{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}

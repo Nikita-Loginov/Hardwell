@@ -1,0 +1,45 @@
+@import "base/_vars.scss";
+
+.header{
+    position: fixed;
+    z-index: 1;
+    min-width: 100%;
+    padding: clamp(0.625rem, 0.313rem + 1.33vw, 1.313rem) 0;
+    background-color: #fff;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+        align-items: center;
+    }
+    &__logo{
+        position: relative;
+        z-index: 100;
+        order:0;
+    }
+    &__btn{
+        @extend %flexCenter;
+        min-height: clamp(2.5rem, 2.045rem + 1.94vw, 3.5rem);
+        border-radius: $borderRadiusBtn;
+        background: rgb(14, 16, 23);
+        color: rgb(255, 255, 255);
+        @extend %Epilogue-600;
+        font-size: clamp(1rem, 0.886rem + 0.48vw, 1.25rem);
+        line-height: 1.2;
+        transition: all .5s;
+        padding: 0 clamp(0.625rem, 0.057rem + 2.42vw, 1.875rem);
+        position: relative;
+        z-index: 7;
+        order:1;
+        &:hover{
+            background: rgb(7, 9, 14);
+            border-radius: 10px;
+            
+        }
+    }
+    @media(max-width:1023px){
+        &__btn{
+            margin-left: auto;
+        }
+    }
+}

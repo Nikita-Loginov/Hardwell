@@ -1,0 +1,1 @@
+const menu=document.querySelector(".menu"),menuBtn=document.querySelector(".menu__burger");menuBtn.addEventListener("click",(function(e){menu.classList.toggle("active")}));

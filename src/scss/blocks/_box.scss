@@ -1,0 +1,12 @@
+.box{
+    margin-bottom: clamp(1.25rem, -0.17rem + 6.06vw, 4.375rem);
+    display: flex;
+    flex-direction: column;
+    gap:clamp(0.938rem, 0.568rem + 1.58vw, 1.75rem);
+    &__title{
+        @extend %title;
+    }
+    &__text{
+
+    }
+}

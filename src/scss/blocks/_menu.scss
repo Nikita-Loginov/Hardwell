@@ -1,0 +1,143 @@
+@import "base/_vars.scss";
+
+.menu{
+    &__list{
+        display: flex;
+        gap:clamp(0.625rem, -0.227rem + 3.64vw, 2.5rem);
+        
+    }
+    &__item{
+        position: relative;
+        transition: all 1s;
+        &:before{
+            position: absolute;
+            content:"";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $accent-color;
+            scale: 0;
+            transform-origin: right;
+            transition: scale .5s;
+        }
+        &:hover{
+            &:before{
+                scale: 1;
+                transform-origin: left;
+            }
+        }
+    }
+    &__link{
+        text-transform: capitalize;
+        @extend %Epilogue-400;
+        color:#000;
+    }
+    &__burger{
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        border: none;
+        position: relative;
+        z-index: 100;
+        display: none;
+        &:before,
+        &:after{
+            position: absolute;
+            content:"";
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #000;
+            left: 0;
+        }
+        &:before{
+            top: 0;
+            rotate:0;
+            transition: top .5s,rotate 1s;
+        }
+        &:after{
+            bottom: 0;
+            rotate:0;
+            transition: bottom .5s,rotate 1s;
+        }
+        span{
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #000;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .5s;
+        }
+    }
+    @media(max-width:1023px){
+        order:2;
+        
+        &__list{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height:100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: clamp(11.563rem, 9.716rem + 7.88vw, 15.625rem);
+            background-color: rgb(242, 242, 242,0.7);
+            transform: translateX(100%);
+            transition: all .5s;
+            z-index: 5;
+            
+        }
+        &__item{
+            &:nth-of-type(1){
+                transform: translateX(100px);
+            }
+            &:nth-of-type(2){
+                transform: translateX(120px);
+            }
+            &:nth-of-type(3){
+                transform: translateX(140px);
+            }
+            &:nth-of-type(4){
+                transform: translateX(160px);
+            }
+            &:nth-of-type(5){
+                transform: translateX(180px);
+            }
+        }
+        &__burger{
+            display: block;
+        }
+        &__link{
+            font-size: 26px;
+        }
+        &.active{
+            .menu__list{
+                transform: translateX(0);
+            }
+            .menu__item{
+                transform: translateX(0px);
+            }
+            .menu__burger{
+                span{
+                    opacity: 0;
+                    transform: translateX(-100%);
+                }
+                &:after{
+                    bottom: 9px;
+                    rotate: 45deg;
+                }
+                &:before{
+                    top: 8px;
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import "base/_vars.scss";
+
+.about{
+    padding-bottom: clamp(1.25rem, -3.011rem + 18.18vw, 10.625rem);
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:70px;
+    }
+    &__imgbox{
+        position: relative;
+    }
+    &__content{
+        flex-basis: 470px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__badge{
+        text-transform: uppercase;
+        margin-bottom: clamp(0.625rem, 0.341rem + 1.21vw, 1.25rem);
+        opacity: 0.5;
+    }
+    &__title{
+        @extend %title;
+        margin-bottom: 28px;
+        text-transform: capitalize;
+    }
+    &__text{
+        opacity: 0.5;
+        margin-bottom: clamp(0.625rem, 2.67vw, 2rem);
+    }
+    &__link{
+        @extend %btn;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 16px;
+            height: 16px;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/top/arrowBtn.svg);
+            right: 30px;
+            background-repeat: no-repeat;
+            transition: all .5s;
+        }
+        &:hover{
+            &:before{
+                rotate:-360deg;
+            }
+        }
+    }
+    .about__link{
+        padding-right: 64px;
+    }
+    @media(max-width:1023px) {
+        &__inner{
+            gap:20px;
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media(max-width:767px) {
+        &__inner{
+            flex-direction: column;
+        }
+        &__content{
+            flex-basis: auto;
+        }
+    }
+    @media(max-width:550px) {
+        &__link{
+            width: 100%;
+        }
+    }
+    
+}

@@ -1,0 +1,127 @@
+//COLORS
+$bg-color:#fff;
+$main-color:#333333;
+$accent-color:#EA3D3C;
+$text-color:#333;
+$title-color:#333333;
+$button-colorbg:$accent-color;
+// $input-color:#000;
+// $textarea-color:#563563;
+$button-color:#563563;
+//PADDING
+$padding-container:0px 15px;
+@mixin padding($pt,$pr,$pb,$pl){
+    padding:$pt $pr $pb $pl;
+}
+
+//MIN-HEIGHT
+$minHeight-btn:clamp(2.5rem, 2.045rem + 1.94vw, 3.5rem);
+// $minHeight-textarea:60px;
+// $minHeight-input:60px;
+//BORDER
+@mixin border($borderWidth,$borderColor,$borderStyle){
+    border:$borderWidth $borderColor $borderStyle;
+}
+//BORDERRADIUS
+$borderRadiusBtn:5px;
+// $borderRadiusInput:15px;
+// $borderRadiusTextarea:15px;
+// $borderRadiusCard:5px;
+@mixin borderRadius($borderRadiusWidth){
+    border-radius:$borderRadiusWidth;
+}
+
+
+%Epilogue-400{
+    font-family: "Epilogue", sans-serif;
+    font-weight: 400;
+}
+
+%Epilogue-500{
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+}
+
+%Epilogue-600{
+    font-family: "Epilogue", sans-serif;
+    font-weight: 600;
+}
+
+%Epilogue-700{
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+}
+
+%Poppins-400{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+%Poppins-500{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+%title{
+    font-size: clamp(1.875rem, 1.136rem + 3.15vw, 3.5rem);
+    color:$title-color;
+    line-height: 1.14;
+    @extend %Epilogue-700;
+}
+
+%text{
+    font-size: 16px;
+    color:$text-color;
+    line-height: 2;
+    @extend %Poppins-400;
+}
+
+%flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%btn{
+    @extend %flexCenter;
+    min-height: $minHeight-btn;
+    @include padding(0,32px,0,30px);
+    @include borderRadius($borderRadiusBtn);
+    background-color: $button-colorbg;
+    transition: all .5s;
+    font-size: 16px;
+    line-height: 1.625;
+    color:#fff;
+    @extend %Epilogue-500;
+    // @include border(1px,$accent-color,solid);
+    &:hover{
+        border-radius: 10px;
+        background-color: #f51c1c;
+    }
+}
+
+// %input{
+//     @extend %flexCenter;
+//     @include padding(0,20px,0,20px);
+//     @include border(1px,red,solid);
+//     @include borderRadius($borderRadiusInput);
+//     min-height: $minHeight-input;
+//     background-color: $input-color;
+//     &::placeholder{
+//         @extend %text;
+//     }
+// }
+
+// %textarea{
+//     @extend %flexCenter;
+//     @include padding(0,20px,0,20px);
+//     @include border(1px,red,solid);
+//     @include borderRadius($borderRadiusTextarea);
+//     min-height: $minHeight-textarea;
+//     background-color: $textarea-color;
+//     resize: none;
+//     &::placeholder{
+//         @extend %text;
+//     }
+// }
+

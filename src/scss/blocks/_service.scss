@@ -1,0 +1,39 @@
+.service{
+    padding: clamp(1.25rem, -1.307rem + 10.91vw, 6.875rem) 0 clamp(1.25rem, -3.58rem + 20.61vw, 11.875rem);
+    &__box{
+        text-align: center;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: 310px 310px 330px;
+        gap:clamp(0.625rem, 0.341rem + 1.21vw, 1.25rem);
+        justify-content: space-between;
+    }
+    &__img{
+        margin-bottom: clamp(0.625rem, -0.142rem + 3.27vw, 2.313rem);
+    }
+    &__title{
+        font-size: 22px;
+        color:#25373F;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        @extend %Epilogue-600;
+    }
+    &__text{
+        color:#25373F;
+        @extend %Poppins-400;
+    }
+    @media(max-width:1023px){
+        &__items{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media(max-width:550px){
+        &__items{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__item{
+            text-align: center;
+        }
+    }
+}
