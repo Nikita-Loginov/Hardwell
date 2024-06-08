@@ -1,9 +1,15 @@
+html{
+    scroll-behavior: smooth;
+    
+}
+
 body{
     font-size: 16px;
     background-color: $bg-color;
     color:$main-color;
     @extend %Epilogue-400;
-    overflow-x: hidden;
+    overflow: hidden;
+    cursor: none;
     &.open--menu{
         overflow: hidden;
     }

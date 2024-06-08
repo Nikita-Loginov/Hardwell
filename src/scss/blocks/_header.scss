@@ -31,6 +31,7 @@
         position: relative;
         z-index: 7;
         order:1;
+        cursor: none;
         &:hover{
             background: rgb(7, 9, 14);
             border-radius: 10px;

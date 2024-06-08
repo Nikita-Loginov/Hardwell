@@ -1,0 +1,37 @@
+@import "base/_vars.scss";
+
+.team{
+    padding: clamp(1.25rem, -3.608rem + 20.73vw, 11.938rem) 0;
+
+    &__box{
+        text-align: center;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+        gap:clamp(0.625rem, 0.057rem + 2.42vw, 1.875rem);
+    }
+    &__img{
+        margin-bottom: 25px;
+        display: inline-block;
+        transition: all .5s;
+        &:hover{
+            scale:1.05;
+        }
+    }
+    &__name{
+        color:$main-color;
+        font-size: 24px;
+        @extend %Epilogue-700;
+        margin-bottom: 3px;
+    }
+    &__post{
+        opacity: 0.5;
+    }
+    @media(max-width:1279px){
+        &__item{
+            text-align: center;
+        }
+    }
+}
+

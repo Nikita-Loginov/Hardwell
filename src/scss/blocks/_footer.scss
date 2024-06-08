@@ -1,0 +1,11 @@
+@import "base/_vars.scss";
+
+.footer{
+    background-color: #111;
+    padding: clamp(1.25rem, -0.057rem + 5.58vw, 4.125rem) 0;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap:clamp(1.25rem, -1.449rem + 11.52vw, 7.188rem);
+    }
+}

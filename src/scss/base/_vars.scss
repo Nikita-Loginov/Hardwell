@@ -32,6 +32,7 @@ $borderRadiusBtn:5px;
 }
 
 
+
 %Epilogue-400{
     font-family: "Epilogue", sans-serif;
     font-weight: 400;
@@ -93,6 +94,7 @@ $borderRadiusBtn:5px;
     line-height: 1.625;
     color:#fff;
     @extend %Epilogue-500;
+    cursor: none;
     // @include border(1px,$accent-color,solid);
     &:hover{
         border-radius: 10px;

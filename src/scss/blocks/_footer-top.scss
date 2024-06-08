@@ -1,0 +1,51 @@
+@import "base/_vars.scss";
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+    align-items: center;
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+    }
+    &__text{
+        color:rgba(255,255,255,0.5)
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+    }
+    &__item{
+        position: relative;
+        transition: all 1s;
+        &:before{
+            position: absolute;
+            content:"";
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            background-color: $accent-color;
+            transform-origin: right;
+            scale:0;
+            transition: scale .5s;
+        }
+        &:hover{
+            &:before{
+                transform-origin: left;
+                scale:1;
+            }
+        }
+    }
+    &__link{
+        color:#fff
+    }
+    @media(max-width:550px){
+        flex-direction: column;
+        align-items: flex-start;
+        gap:25px;
+    }
+}

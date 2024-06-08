@@ -1,0 +1,38 @@
+@import "base/_vars.scss";
+
+.modal{
+    position: absolute;
+    top: -253px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__play{
+        position: absolute;
+        width: clamp(2.5rem, 1.364rem + 4.85vw, 5rem);
+        height: clamp(2.5rem, 1.364rem + 4.85vw, 5rem);
+        border:1px solid $accent-color;
+        background-color: $accent-color;
+        border-radius: 50%;
+        @extend %flexCenter;
+        &:before{
+            position: absolute;
+            content:"";
+            width: clamp(0.938rem, 0.511rem + 1.82vw, 1.875rem);
+            height: clamp(0.938rem, 0.511rem + 1.82vw, 1.875rem);
+            background-image: url(../img/icon/play.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: translateX(14%);
+        }
+    }
+    @media(max-width:1023px){
+        position: static;
+        transform: translate(0);
+        margin-bottom: clamp(1.25rem, -0.558rem + 7.72vw, 4.375rem);
+        &__img{
+            width: 100%;
+        }
+    }
+}

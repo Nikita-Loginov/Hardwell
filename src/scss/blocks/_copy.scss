@@ -1,0 +1,23 @@
+.copy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    &__text{
+        color:rgba(255, 255, 255, 0.503);
+    }
+    &__privaty{
+        display: flex;
+        gap:clamp(0.625rem, -0.568rem + 5.09vw, 3.25rem);
+    }
+    &__terms,
+    &__policy{
+        color:#fff;
+        line-height: 2;
+    }
+    @media(max-width:767px){
+        flex-direction: column;
+        gap:20px;
+        text-align: center;
+    }
+}

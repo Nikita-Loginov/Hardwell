@@ -1,0 +1,19 @@
+@import "base/_vars.scss";
+
+.blog{
+    padding-bottom: clamp(1.25rem, -0.767rem + 8.61vw, 5.688rem);
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.25rem, -0.17rem + 6.06vw, 4.375rem);
+    }
+    &__title{
+        @extend %title;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
+        gap:10px;
+        justify-content: space-between;
+    }
+}

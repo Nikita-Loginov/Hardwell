@@ -1,0 +1,33 @@
+@import "base/_vars.scss";
+
+.work{
+    padding: 380px 0 clamp(1.25rem, -0.824rem + 8.85vw, 5.813rem);
+    background: rgb(243, 247, 245);
+    position: relative;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap:20px;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__text{
+        flex-basis: 470px;
+        color:#000;
+    }
+    .work__title{
+        font-size: clamp(1.5rem, 1.045rem + 1.94vw, 2.5rem);
+    } 
+    @media(max-width:1023px){
+        padding-top: clamp(1.25rem, -0.558rem + 7.72vw, 4.375rem)
+    }
+    @media(max-width:550px){
+        &__content{
+            flex-direction: column;
+        }
+        &__text{
+            flex-basis: auto;
+        }
+    }
+}

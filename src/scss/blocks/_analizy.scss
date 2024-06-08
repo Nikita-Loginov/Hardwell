@@ -1,5 +1,5 @@
 .analizy{
-    padding-bottom: clamp(1.25rem, -2.159rem + 14.55vw, 8.75rem);
+    padding-bottom: clamp(1.25rem, -9.347rem + 45.21vw, 24.563rem);
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -50,6 +50,9 @@
             }
         }
     }
+    @media(max-width:1023px){
+        padding-bottom:clamp(1.25rem, -0.558rem + 7.72vw, 4.375rem);
+    }    
     @media(max-width:767px){
         &__inner{
             flex-direction: column-reverse;
